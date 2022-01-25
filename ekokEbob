@@ -1,0 +1,60 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner digit= new Scanner(System.in);
+
+
+        int ekok=0,ebob=1;
+        int asal;
+
+        System.out.print("Lütfen n1 sayısını giriniz: ");
+        int n1= digit.nextInt();
+        System.out.print("Lütfen n2 sayısının giriniz");
+        int n2= digit.nextInt();
+        asal=n1*n2; // sayılar aralarında asal ise ekokları çarpımları olur
+
+
+      int i=asal;
+        while (i>0) {
+            if ((i%n1==0)&&(i%n2==0)) {
+            ekok=i;
+            i--;
+            System.out.println("2 sayının EKOK değeri: "+ekok);
+        }}
+
+
+// buradaki kodun çalışmama nedenini çözemedim :(
+        while (i<n1) {
+            if ((n1%i==0)&&(n2%i==0)) {
+                ebob=i;
+                i++;
+                System.out.println("2 sayının EBOB değeri: "+ebob);
+            }}
+
+
+    //alt kısımdaki patikada anlatılan yukarısı ödev olarak verilen kısım
+
+     /**
+       for (int i=asal; i>0; i--) {
+            if ((i%n1==0)&&(i%n2==0)) {
+            ekok=i;
+
+            }
+        }
+        System.out.println("2 sayının EKOK değeri: "+ekok);
+        System.out.println("*********");
+
+        for (int i=1; i<n1;i++){
+            if (n1%i==0&&n2%i==0){
+                ebob=i;
+            }
+        }
+        System.out.println("2 Sayının EBOB değeri: "+ebob);
+    */
+
+        }
+
+    }
+
